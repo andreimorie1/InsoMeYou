@@ -2,32 +2,38 @@
 <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
+    android:background="#121212"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="#101010"
     tools:context=".StartUp">
 
-    <ImageView
-        android:id="@+id/imageView"
-        android:layout_width="295dp"
-        android:layout_height="312dp"
-        android:layout_marginTop="72dp"
+    <com.airbnb.lottie.LottieAnimationView
+        android:id="@+id/lottieAnimationView"
+        android:layout_width="wrap_content"
+        android:layout_height="400dp"
+        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:srcCompat="@drawable/logo_startup" />
+        app:layout_constraintVertical_bias="0.078"
+        app:lottie_autoPlay="true"
+        app:lottie_rawRes="@raw/splash_screen">
+    </com.airbnb.lottie.LottieAnimationView>
 
     <TextView
-        android:id="@+id/textView"
-        android:layout_width="217dp"
-        android:layout_height="48dp"
-        android:layout_marginTop="36dp"
-        android:text="Fetching Details..."
+        android:id="@+id/textSplashScreen"
+        android:layout_width="225dp"
+        android:layout_height="40dp"
+        android:text="Loading"
         android:textAlignment="center"
-        android:textSize="24sp"
+        android:textColor="#e3e3e3"
+        android:textSize="34sp"
+        android:textStyle="bold|italic"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="@+id/imageView"
-        app:layout_constraintStart_toStartOf="@+id/imageView"
-        app:layout_constraintTop_toBottomOf="@+id/imageView"
-        app:layout_constraintVertical_bias="0.0" />
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.532"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.7" />
+
 </androidx.constraintlayout.widget.ConstraintLayout>
