@@ -9,8 +9,6 @@ import android.widget.TextView;
 import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
 
-import org.w3c.dom.Text;
-
 import java.util.List;
 
 public class Adapter extends RecyclerView.Adapter<Adapter.ViewHolder> {
@@ -32,10 +30,9 @@ public class Adapter extends RecyclerView.Adapter<Adapter.ViewHolder> {
     @Override
     public void onBindViewHolder(@NonNull Adapter.ViewHolder holder, int position) {
         int imgResource = usersList.get(position).getImageview1();
-        String headerResource = usersList.get(position).getTextview1();
         String detailsResource = usersList.get(position).getDetail1();
 
-        holder.setData(imgResource, headerResource, detailsResource);
+        holder.setData(imgResource, detailsResource);
     }
 
     @Override
@@ -43,24 +40,21 @@ public class Adapter extends RecyclerView.Adapter<Adapter.ViewHolder> {
         return usersList.size();
     }
 
-    public class ViewHolder extends RecyclerView.ViewHolder{
+    public static class ViewHolder extends RecyclerView.ViewHolder{
 
         private ImageView imageView;
-        private TextView textView1;
         private TextView textView2;
 
         public ViewHolder(@NonNull View itemView) {
             super(itemView);
 
             imageView = itemView.findViewById(R.id.imageview1);
-            textView1 = itemView.findViewById(R.id.header1);
             textView2 = itemView.findViewById(R.id.detail1);
 
         }
 
-        public void setData(int imgResource, String headerResource, String detailsResource) {
+        public void setData(int imgResource, String detailsResource) {
             imageView.setImageResource(imgResource);
-            textView1.setText(headerResource);
             textView2.setText(detailsResource);
         }
     }

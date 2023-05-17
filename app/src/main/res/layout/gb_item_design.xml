@@ -12,16 +12,15 @@
         android:layout_marginTop="5dp">
 
         <androidx.cardview.widget.CardView
-            android:id="@+id/cardview1"
+            android:id="@+id/gb_cardview1"
             android:layout_width="70dp"
             android:layout_height="70dp"
             android:layout_marginStart="10dp"
             android:layout_marginVertical="10dp"
-            app:cardCornerRadius="15dp"
-            >
+            app:cardCornerRadius="15dp">
 
             <ImageView
-                android:id="@+id/imageview1"
+                android:id="@+id/gb_imageview1"
                 android:layout_width="70dp"
                 android:layout_height="70dp"
                 android:background="#353434"
@@ -31,13 +30,24 @@
         </androidx.cardview.widget.CardView>
 
         <TextView
-            android:id="@+id/detail1"
+            android:id="@+id/gb_header1"
+            android:layout_width="290dp"
+            android:layout_height="30dp"
+            android:layout_marginStart="20dp"
+            android:layout_marginTop="10dp"
+            android:layout_toEndOf="@id/gb_cardview1"
+            android:text="Header"
+            android:textColor="#e2e2e2"
+            android:textSize="20sp"></TextView>
+
+        <TextView
+            android:id="@+id/gb_detail1"
             android:layout_width="290dp"
             android:layout_height="wrap_content"
-            android:layout_marginTop="10dp"
+            android:layout_below="@+id/gb_header1"
             android:layout_marginStart="20dp"
             android:layout_marginBottom="10dp"
-            android:layout_toEndOf="@id/cardview1"
+            android:layout_toEndOf="@id/gb_cardview1"
             android:text="Content Goes here"
             android:textColor="#9c9c9c"
             android:textSize="13sp"></TextView>
